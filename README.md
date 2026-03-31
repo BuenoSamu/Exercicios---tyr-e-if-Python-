@@ -71,5 +71,5 @@ Em constante atualização conforme novas atividades são propostas.
 🤝 Contribuição
 Este projeto é acadêmico, mas sugestões são sempre bem-vindas!
 
-📎 Autor
-Feito por Samuel Bueno
+📎 Autoria
+Samuel Bueno
