@@ -9,20 +9,21 @@ def apresentacao():
     print("|                            |")
     print("+----------------------------+")
 
+
 def obtem_temperatura_a_ser_convertida():
     chave_para_digitar_ate_acertar_ligada = True
     while chave_para_digitar_ate_acertar_ligada:
         try:
-            GrausCelcius = float(input("Quantos graus Celsius você quer converter? "))
+            GrausRankine = float(input("\n Quantos graus Rankie voce quer converter? \n"))
         except ValueError:
-            print("\nDEVE-SE DIGITAR UM NUMERO! TENTE NOVAMENTE...\n")
+             print("\n DEVE-SE DIGITAR UM NUMERO! TENTE NOVAMENTE...\n")
         else:
-            if GrausCelcius < -273.15:
-                print("\nERRO: Nenhuma temperatura pode ser menor que -273.15°C \n")
-            else: GrausRankine = (GrausCelcius + 273.15) * 1.8
-            print("O grau Celsius em Rankine é igual a", GrausRankine, "graus Rankine")
-            chave_para_digitar_ate_acertar_ligada = False
-    return GrausRankine
+            if GrausRankine < 0: print("\n ERRO: Nenhuma temperatura pode ser menor que 0°Ra \n")
+            else: 
+                GrausFahrenheit = GrausRankine - 459.67
+                print("A temperatura em Graus Rankie é equivalente a", GrausFahrenheit, "Graus Rankinie")
+                chave_para_digitar_ate_acertar_ligada = False
+    return GrausFahrenheit
 
 def resposta_s_ou_n_para_pergunta(pergunta):
     chave_para_digitar_ate_acertar_ligada = True
@@ -30,15 +31,17 @@ def resposta_s_ou_n_para_pergunta(pergunta):
         resposta = input(pergunta).upper()
         if resposta != "S" and resposta != "N":
             print("\nDEVE-SE RESPONDER S OU N!\n")
-        else:
-            chave_para_digitar_ate_acertar_ligada = False
+        else: chave_para_digitar_ate_acertar_ligada = False
     return resposta
 
 apresentacao()
 chave_para_calcular_ate_parar = True
 while chave_para_calcular_ate_parar:
-    numero_converter = obtem_temperatura_a_ser_convertida()
-    resposta = resposta_s_ou_n_para_pergunta("\nDESEJA CONVERTER MAIS TEMPERATURAS? (S/N)\n ")
+    numero_convertido = obtem_temperatura_a_ser_convertida()
+    resposta = resposta_s_ou_n_para_pergunta(
+        "\nDESEJA CONVERTER MAIS TEMPERATURAS? (S/N)\n"
+    )
+
     if resposta == "N":
         chave_para_calcular_ate_parar = False
-        print("PROGRAMA ENCERRADO! OBRIGADO POR UTILIZAR MEU HUMILDE PROGRAMA :)")
+        print("\nPROGRAMA ENCERRADO! OBRIGADO POR UTILIZAR MEU HUMILDE PROGRAMA :)")

@@ -60,10 +60,6 @@ def resposta_s_ou_n_para_pergunta (pergunta):
         else:
             chave_para_digitar_ate_acertar_ligada=False
     return resposta
-
-#DAQUI PARA CIMA, DEFINIMOS PROCEDIMENTOS E FUNÇÕES
-#DAQUI PARA BAIXO, IMPLEMENTAMOS O PROGRAMA QUE CHAMA TUDO QUE FOI DEFINIDO ACIMA
-
 apresentacao()
 chave_para_desenhar_ate_cansar_ligada=True
 while chave_para_desenhar_ate_cansar_ligada:
