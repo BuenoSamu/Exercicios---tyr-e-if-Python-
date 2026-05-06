@@ -1,3 +1,14 @@
+def apresentacao():
+    print("+----------------------------+")
+    print("|                            |")
+    print("| PROGRAMA PARA LISTINHAS E  |")
+    print("|          LISTONAS          |")
+    print("|                            |")
+    print("|                            |")
+    print("|Versão 2.0 de 02/05/2026    |")
+    print("|                            |")
+    print("+----------------------------+")
+
 registro_de_disciplina = [
     ["Matemática", 8.5, 0.90], 
     ["Português", 7.0, 0.85],   
@@ -57,7 +68,8 @@ def TirarRaiz(produto, soma_pesos):
     raiz = produto ** (1 / soma_pesos)
 
     return raiz
-    
+
+apresentacao()    
 resultados = ElevaNotaPeloPeso(registro_de_disciplina)
 ResultadoDaMultiplicacao = MultiplicaTodosOsResultados(resultados)
 SomaDosPesos = SomaDosPesos(pesos)
