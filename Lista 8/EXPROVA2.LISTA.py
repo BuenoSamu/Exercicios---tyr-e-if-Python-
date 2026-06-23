@@ -20,40 +20,43 @@ internacao = [
     {"dataEnt": "18/03/2024", "dataSai": "25/03/2024", "idPaciente": 456, "codDoenca": ["F32.0", "J06.9"]}
 ]
 
-def pacientescomumadoencaso(paciente, doenca, internacao):
+def mediadedoencasdepacientescombasenodiaquenasceu(paciente, internacao, data):
 
-    if len(paciente) == 0 or len(doenca) == 0 or len(internacao) == 0: 
+    if len(paciente) == 0 or len(internacao) == 0: 
         return None
     
+    qtd = 0 
+    soma = 0 
     resultado = []
-    i = 0
+    i = 0 
 
-    while i < len(internacao): 
-
-        idpaciente = internacao[i]["idPaciente"]
-        listadoencas = internacao[i]["codDoenca"]
-
-        if len(listadoencas) == 1:
+    while i < len(paciente):
+        idpaciente = paciente[i]["id"]
+        if paciente[i]["dataNasc"] == data:
+            qtd += 1
+            cont = 0 
+            nomepaciente = paciente[i]["nome"]
 
             j = 0 
-            while j < len(paciente):
-                if paciente[j]["id"] == idpaciente: 
-                    nomepaciente = paciente[j]["nome"]
-                j += 1 
+            while j < len(internacao): 
+                if internacao[j]["idPaciente"] == idpaciente:
+                    if len(internacao[j]["codDoenca"]) == 1: 
+                        cont += 1
+                j += 1
 
-                k = 0 
-            while k < len(doenca):
-                if listadoencas[0] == doenca[k]["cod"]:
-                    nomedoenca = doenca[k]["nome"]
-                k += 1
+            if qtd == 0: 
+             return None 
+            
+            soma += cont
+            media = soma / qtd 
 
-            if nomedoenca is not None and nomepaciente is not None: 
+            if nomepaciente is not None and media is not None:
                 resultado.append({
                     "Nome do paciente: ": nomepaciente,
-                    "Nome da doenca: ": nomedoenca
+                    "Media: ": media
                 })
 
-        i += 1
-        
+        i +=1 
     return resultado
-print(pacientescomumadoencaso(paciente, doenca, internacao))
+
+print(mediadedoencasdepacientescombasenodiaquenasceu(paciente, internacao, "19/12/1992"))
