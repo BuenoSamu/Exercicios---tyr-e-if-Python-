@@ -27,42 +27,42 @@ def doencasnuncainternadas(paciente, doenca, internacao):
     doencasencontradas = []
 
     while i < len(paciente):
-        iddopaciente = paciente[i]["id"]
+        idpaciente = paciente[i]["id"]
 
         j = 0
         while j < len(internacao):
-
-            if internacao[j]["idPaciente"] == iddopaciente:
-
-                x = 0
-                while x < len(internacao[j]["codDoenca"]):
-
-                    codigo = internacao[j]["codDoenca"][x]
-
+            if internacao[j]["idPaciente"] == idpaciente:
+                k = 0
+                while k < len(internacao[j]["codDoenca"]):
+                    codigo = internacao[j]["codDoenca"][k]
                     if codigo not in doencasencontradas:
                         doencasencontradas.append(codigo)
-
-                    x += 1
-
+                    k += 1
             j += 1
-
+        l = 0
+        while l < len(doenca):
+            if doenca[l]["cod"] not in doencasencontradas:
+                resultado.append({
+                    "Doenca nunca internada": doenca[l]["nome"]
+                })
+            l += 1
         i += 1
-
-    k = 0
-    while k < len(doenca):
-
-        if doenca[k]["cod"] not in doencasencontradas:
-
-            resultado.append({
-                "Doencas que nunca internaram ninguem": doenca[k]["nome"]
-            })
-
-        k += 1
 
     return resultado
 
 
 print(doencasnuncainternadas(paciente, doenca, internacao))
 
+
+      
+
+
                 
 
+
+
+                
+
+
+
+    
