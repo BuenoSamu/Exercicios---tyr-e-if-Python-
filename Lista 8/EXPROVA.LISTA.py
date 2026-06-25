@@ -20,40 +20,43 @@ internacao = [
     {"dataEnt": "18/03/2024", "dataSai": "25/03/2024", "idPaciente": 456, "codDoenca": ["F32.0", "J06.9"]}
 ]
 
-def pacientescomumadoencaso(paciente, doenca, internacao):
+def pacientescomumadoencaso(paciente, doenca, internacao, nomedoenca):
 
     if len(paciente) == 0 or len(doenca) == 0 or len(internacao) == 0: 
         return None
     
-    resultado = []
-    i = 0
+    resultado = [] 
+    coddesejado = None 
+    i = 0 
 
-    while i < len(internacao): 
-
-        idpaciente = internacao[i]["idPaciente"]
-        listadoencas = internacao[i]["codDoenca"]
-
-        if len(listadoencas) == 1:
-
-            j = 0 
-            while j < len(paciente):
-                if paciente[j]["id"] == idpaciente: 
-                    nomepaciente = paciente[j]["nome"]
-                j += 1 
-
-                k = 0 
-            while k < len(doenca):
-                if listadoencas[0] == doenca[k]["cod"]:
-                    nomedoenca = doenca[k]["nome"]
-                k += 1
-
-            if nomedoenca is not None and nomepaciente is not None: 
-                resultado.append({
-                    "Nome do paciente: ": nomepaciente,
-                    "Nome da doenca: ": nomedoenca
-                })
-
+    while i < len(doenca): 
+        if doenca[i]["nome"] == nomedoenca: 
+            coddesejado = doenca[i]["cod"]
         i += 1
-        
+
+    j = 0 
+    while j < len(internacao): 
+        codigos = internacao[j]["codDoenca"]
+
+        if len(codigos) == 1:
+            k = 0 
+            encontrou = False
+            while k < len(codigos): 
+                if codigos[k] == coddesejado: 
+                    encontrou = True
+                k += 1
+            
+            if encontrou: 
+                idpaciente = internacao[j]["idPaciente"]
+
+                l = 0 
+                while l < len(paciente): 
+                    if paciente[l]["id"] == idpaciente: 
+                        nomepaciente = paciente[l]["nome"]
+                    l += 1
+
+                if nomepaciente is not None: 
+                    resultado.append({"Nome do paciente: ": nomepaciente, "Nome da doeca": nomedoenca})
+        j += 1
     return resultado
-print(pacientescomumadoencaso(paciente, doenca, internacao))
+print(pacientescomumadoencaso(paciente, doenca, internacao, "Infecção respiratória aguda não especificada"))
