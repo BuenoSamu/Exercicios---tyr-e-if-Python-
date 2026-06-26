@@ -43,20 +43,21 @@ def mediadedoencasdepacientescombasenodiaquenasceu(paciente, internacao, data):
                     if len(internacao[j]["codDoenca"]) == 1: 
                         cont += 1
                 j += 1
-
-            if qtd == 0: 
-             return None 
             
             soma += cont
-            media = soma / qtd 
-
-            if nomepaciente is not None and media is not None:
-                resultado.append({
-                    "Nome do paciente: ": nomepaciente,
-                    "Media: ": media
-                })
-
         i +=1 
+
+        if qtd == 0: 
+            return None
+
+        media = soma / qtd 
+
+        if nomepaciente is not None and media is not None:
+            resultado.append({
+                "Nome do paciente: ": nomepaciente,
+                "Media: ": media
+            })
+
     return resultado
 
 print(mediadedoencasdepacientescombasenodiaquenasceu(paciente, internacao, "19/12/1992"))
