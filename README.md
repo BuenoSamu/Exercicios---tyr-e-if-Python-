@@ -42,7 +42,7 @@ Este repositório tem como principais objetivos:
 
 Os estudos e práticas presentes neste repositório são desenvolvidos com base nos conteúdos e exercícios propostos pelo:
 
-**Professor André Luís dos Reis Gomes de Carvalho **
+**Professor André Luís dos Reis Gomes de Carvalho**
 
 ## Status
 
