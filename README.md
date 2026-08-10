@@ -1,75 +1,55 @@
-🚀 Atividades em Python — If & Try
+# Estudos em Python
 
-📚 Repositório acadêmico com foco em lógica de programação e tratamento de erros em Python.
+Repositório dedicado aos meus estudos e práticas em **Python**, reunindo conteúdos, exercícios e experimentos desenvolvidos ao longo do meu aprendizado na linguagem.
 
-✨ Sobre o Projeto
+O objetivo deste projeto é registrar minha evolução, consolidar conceitos fundamentais de programação e colocar em prática diferentes recursos e estruturas oferecidos pelo Python.
 
-Este repositório reúne atividades desenvolvidas durante os estudos de Python, com foco em:
+## Sobre o Projeto
 
-🔹 Estruturas condicionais (if, elif, else)
+Este repositório acompanha minha jornada de aprendizado em Python, explorando desde conceitos básicos de programação até recursos que permitem desenvolver soluções mais completas e organizadas.
 
-🔹 Tratamento de exceções (try, except, finally)
+Entre os principais conteúdos estudados estão:
 
-As atividades foram propostas pelo professor André Maligno e têm como objetivo fortalecer a base em lógica e construção de código seguro.
+* Variáveis e tipos de dados;
+* Operadores e expressões;
+* Estruturas condicionais;
+* Estruturas de repetição;
+* Funções;
+* Listas, tuplas, conjuntos e dicionários;
+* Manipulação de strings;
+* Entrada e saída de dados;
+* Tratamento de erros e exceções;
+* Manipulação e organização de dados;
+* Módulos e bibliotecas;
+* Boas práticas de programação;
+* Resolução de problemas utilizando Python.
 
-🧠 Habilidades Desenvolvidas
+Os conteúdos podem ser ampliados conforme novos conceitos forem estudados e aplicados.
 
-✔️ Tomada de decisão com estruturas condicionais
+## Objetivos
 
-✔️ Validação de dados de entrada
+Este repositório tem como principais objetivos:
 
-✔️ Tratamento de erros e exceções
+* Desenvolver e aprimorar minha lógica de programação;
+* Consolidar os fundamentos da linguagem Python;
+* Praticar a resolução de problemas através da programação;
+* Explorar diferentes recursos e funcionalidades da linguagem;
+* Melhorar a organização, legibilidade e qualidade do código;
+* Registrar minha evolução durante o processo de aprendizado;
+* Construir uma base sólida para projetos futuros.
 
-✔️ Escrita de código mais robusto
+## Orientação
 
-✔️ Organização de projetos em Python
+Os estudos e práticas presentes neste repositório são desenvolvidos com base nos conteúdos e exercícios propostos pelo:
 
-📂 Estrutura do Projeto
-📦 atividades-python-if-try
-┣ 📂 if
-┃ ┣ 📜 exercicio1.py
-┃ ┣ 📜 exercicio2.py
-┃ ┗ 📜 ...
-┣ 📂 try
-┃ ┣ 📜 exercicio1.py
-┃ ┣ 📜 exercicio2.py
-┃ ┗ 📜 ...
-┗ 📜 README.md
+**Professor André Luís dos Reis Gomes de Carvalho **
 
-⚙️ Como Executar
+## Status
 
-# Clone o repositório
+**Em desenvolvimento.**
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+Este repositório será atualizado continuamente conforme novos conceitos forem estudados, praticados e incorporados ao meu aprendizado.
 
-# Acesse a pasta
+---
 
-cd seu-repositorio
-
-# Execute um arquivo
-
-python nome_do_arquivo.py
-
-<p> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/> </p>
-
-🎯 Objetivo
-Este repositório faz parte da minha evolução como desenvolvedor, servindo como base para:
-
-🔹 Aprimorar lógica de programação
-
-🔹 Evoluir em Python
-
-🔹 Resolver problemas do mundo real
-
-👨‍🏫 Orientação
-Desenvolvido com base nas atividades propostas por:
-Professor André Maligno
-
-📌 Status do Projeto
-Em constante atualização conforme novas atividades são propostas.
-
-🤝 Contribuição
-Este projeto é acadêmico, mas sugestões são sempre bem-vindas!
-
-📎 Autoria
-Samuel Bueno
+Repositório desenvolvido como parte da minha jornada de **aprendizado em Python e desenvolvimento de habilidades em programação**.
